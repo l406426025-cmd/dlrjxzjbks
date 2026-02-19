@@ -6,173 +6,200 @@
   <title>代理工具合集 · 极光版</title>
   <style>
     :root {
-      --bg: #0f0c1a;
-      --bg-gradient: linear-gradient(135deg, #0f0c1a, #1a0d2e, #0f0c1a);
-      --card-bg: rgba(30, 25, 60, 0.45);
-      --card-border: rgba(168, 85, 247, 0.25);
-      --text: #e0d4ff;
-      --text-muted: #a0a0cc;
-      --purple-neon: #c084fc;
-      --purple-glow: #a855f7;
-      --cyan-glow: #22d3ee;
-      --purple-dark: #7c3aed;
-      --glow-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-      --glow-strong: 0 0 35px rgba(168, 85, 247, 0.7), 0 0 60px rgba(34, 211, 238, 0.4);
+      --bg: #0a0515;
+      --text: #e9dfff;
+      --text-muted: #b0a0d0;
+      --neon-purple: #bb86fc;
+      --neon-cyan: #03dac6;
+      --glow-purple: rgba(187, 134, 252, 0.6);
+      --glow-cyan: rgba(3, 218, 198, 0.5);
+      --card-bg: rgba(25, 20, 50, 0.5);
+      --card-border: rgba(187, 134, 252, 0.3);
+      --strong-glow: 0 0 25px rgba(187,134,252,0.7), 0 0 50px rgba(3,218,198,0.4);
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      background: var(--bg-gradient);
+      background: var(--bg);
       color: var(--text);
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
-      padding: 3rem 1.5rem 5rem;
-      background-attachment: fixed;
+      padding: 4rem 1.5rem 6rem;
+      background: linear-gradient(135deg, #0a0515, #120a25, #0a0515);
       position: relative;
       overflow-x: hidden;
     }
+
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at 20% 30%, rgba(168,85,247,0.08) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 70%, rgba(34,211,238,0.06) 0%, transparent 60%);
+      background: 
+        radial-gradient(circle at 15% 25%, var(--glow-purple) 0%, transparent 60%),
+        radial-gradient(circle at 85% 75%, var(--glow-cyan) 0%, transparent 65%);
+      opacity: 0.6;
       pointer-events: none;
+      animation: aurora-move 30s ease-in-out infinite alternate;
       z-index: -1;
-      animation: aurora 25 ease-in-out infinite alternate;
     }
-    @keyframes aurora {
-      0% { transform: translate(0, 0); opacity: 0.7; }
-      50% { transform: translate(5%, 8%); opacity: 0.9; }
-      100% { transform: translate(-3%, -5%); opacity: 0.75; }
+
+    @keyframes aurora-move {
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(8%, 12%) scale(1.1); }
+      100% { transform: translate(-5%, -8%) scale(1.05); }
     }
+
     h1 {
       text-align: center;
-      font-size: 3.2rem;
-      font-weight: 800;
-      background: linear-gradient(90deg, #c084fc, #22d3ee, #c084fc);
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #bb86fc, #03dac6, #bb86fc);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      margin-bottom: 3.5rem;
-      letter-spacing: -0.03em;
-      text-shadow: 0 0 40px rgba(168,85,247,0.6);
+      margin-bottom: 4rem;
+      letter-spacing: -0.02em;
+      text-shadow: 0 0 60px rgba(187,134,252,0.7);
     }
+
     .tool-list {
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.8rem;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2rem;
+      max-width: 1300px;
       margin: 0 auto;
     }
+
     .tool-item {
       background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 1.8rem 2rem;
-      transition: all 0.4 cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
       position: relative;
       overflow: hidden;
     }
-    .tool-item::before {
+
+    .tool-item:hover {
+      transform: translateY(-15px);
+      border-color: var(--neon-purple);
+      box-shadow: var(--strong-glow);
+    }
+
+    .tool-item::after {
       content: '';
       position: absolute;
-      inset: -50%;
-      background: conic-gradient(from 0deg at 50% 50%, transparent, var(--purple-neon), transparent);
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        transparent,
+        var(--neon-purple),
+        transparent 30%
+      );
       opacity: 0;
-      transition: opacity 0.6;
+      transition: opacity 0.8s;
       pointer-events: none;
+      animation: spin 12s linear infinite;
     }
-    .tool-item:hover::before {
-      opacity: 0.15;
-      animation: rotate 8 linear infinite;
+
+    .tool-item:hover::after {
+      opacity: 0.2;
     }
-    @keyframes rotate {
+
+    @keyframes spin {
       100% { transform: rotate(360deg); }
     }
-    .tool-item:hover {
-      transform: translateY(-12px) scale(1.03);
-      border-color: var(--purple-neon);
-      box-shadow: var(--glow-strong);
-    }
+
     .tool-name {
-      font-size: 1.45rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem;
-      color: var(--purple-neon);
-      text-shadow: 0 0 12px rgba(192,132,252,0.5);
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+      color: var(--neon-purple);
+      text-shadow: 0 0 15px var(--glow-purple);
     }
+
     .tool-desc {
       color: var(--text-muted);
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-      line-height: 1.5;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1.4rem;
     }
+
     .tool-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      color: var(--purple-neon);
+      gap: 0.8rem;
+      color: white;
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+      padding: 0.8rem 1.6rem;
+      border-radius: 50px;
       text-decoration: none;
-      font-weight: 600;
-      padding: 0.6rem 1.3rem;
-      border-radius: 999px;
-      border: 1px solid rgba(192,132,252,0.4);
-      transition: all 0.35;
-      background: rgba(192,132,252,0.08);
+      font-weight: 700;
+      transition: all 0.4s;
+      box-shadow: 0 4px 20px rgba(187,134,252,0.4);
     }
+
     .tool-link:hover {
-      background: linear-gradient(90deg, var(--purple-glow), var(--cyan-glow));
-      color: #0f0c1a;
-      box-shadow: var(--glow-shadow);
-      transform: translateX(6px);
+      transform: translateX(8px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(3,218,198,0.6);
     }
+
     .special {
       grid-column: 1 / -1;
-      background: linear-gradient(135deg, rgba(30,25,60,0.6), rgba(50,30,90,0.5));
-      border: 2px solid var(--purple-neon);
-      box-shadow: 0 0 50px rgba(168,85,247,0.4);
+      background: linear-gradient(135deg, rgba(40,30,80,0.7), rgba(70,40,110,0.6));
+      border: 2px solid var(--neon-purple);
+      box-shadow: 0 0 70px rgba(187,134,252,0.5);
     }
+
     .special .tool-name {
-      font-size: 1.7rem;
-      background: linear-gradient(90deg, #c084fc, #22d3ee);
+      font-size: 1.9rem;
+      background: linear-gradient(90deg, #bb86fc, #03dac6, #bb86fc);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      text-shadow: 0 0 30px rgba(187,134,252,0.8);
     }
+
     .special .tool-link {
-      background: linear-gradient(90deg, var(--purple-glow), var(--cyan-glow));
-      color: #000;
-      border: none;
-      font-size: 1.1rem;
-      padding: 0.8rem 1.8rem;
+      background: white;
+      color: #0a0515;
+      font-size: 1.15rem;
+      padding: 1rem 2rem;
     }
-    @media (max-width: 800px) {
+
+    @media (max-width: 900px) {
       .tool-list { grid-template-columns: 1fr; }
-      h1 { font-size: 2.6rem; }
+      h1 { font-size: 2.8rem; }
+      body { padding: 3rem 1rem 5rem; }
     }
   </style>
 </head>
 <body>
+
   <h1>代理工具合集 · 极光版</h1>
+
   <ul class="tool-list">
+
     <li class="tool-item special">
       <div class="tool-name">翻墙永久订阅</div>
-      <div class="tool-desc">一键复制长期有效节点（推荐直接导入 Karing / sing-box / Clash Meta 等客户端）</div>
+      <div class="tool-desc">长期有效节点，一键导入 Karing / sing-box / Clash Meta / NekoBox 等客户端使用</div>
       <a href="https://gist.githubusercontent.com/l406426025-cmd/bbbb3efb0bd1ed85a72b87f3bce95c49/raw/karing-nodes.txt"
          class="tool-link" target="_blank" rel="noopener noreferrer">
-        → 获取订阅
+        → 获取订阅链接
       </a>
     </li>
 
-    <!-- 其余工具保持原样，只改了样式 -->
     <li class="tool-item">
       <div class="tool-name">Clash Party</div>
       <div class="tool-desc">功能丰富的新一代 Clash 客户端</div>
@@ -180,6 +207,7 @@
         → 下载页面
       </a>
     </li>
+
     <li class="tool-item">
       <div class="tool-name">FlClash</div>
       <div class="tool-desc">简洁美观的 Clash 系客户端</div>
@@ -187,7 +215,120 @@
         → 下载页面
       </a>
     </li>
-    <!-- ... 其他项同上，省略以节省空间。你可以直接替换原列表内容 ... -->
+
+    <li class="tool-item">
+      <div class="tool-name">ClashMi</div>
+      <div class="tool-desc">轻量级 Clash Meta 客户端</div>
+      <a href="https://clashmi.app/download" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Clash Verge</div>
+      <div class="tool-desc">跨平台热门 Clash 图形界面</div>
+      <a href="https://clashverge.net/downloads" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">ClashMeta for Android</div>
+      <div class="tool-desc">安卓平台强大的 Clash Meta 内核客户端</div>
+      <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">ClashBox</div>
+      <div class="tool-desc">盒子风格的 Clash 客户端</div>
+      <a href="https://github.com/xiaobaigroup/ClashBox/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Clash for Mac</div>
+      <div class="tool-desc">macOS 专用 Clash 客户端</div>
+      <a href="https://clashmac.app" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 官网
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Surfboard</div>
+      <div class="tool-desc">简约的规则型代理客户端</div>
+      <a href="https://github.com/getsurfboard/surfboard/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">v2rayN</div>
+      <div class="tool-desc">Windows 经典 v2ray 客户端</div>
+      <a href="https://v2rayn.2dust.link" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">v2rayNG</div>
+      <div class="tool-desc">Android 平台主流 v2ray 客户端</div>
+      <a href="https://v2rayng.2dust.link" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">sing-box</div>
+      <div class="tool-desc">新一代通用代理内核（SagerNet 官方）</div>
+      <a href="https://github.com/SagerNet/sing-box/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Karing</div>
+      <div class="tool-desc">支持 sing-box 的现代化客户端</div>
+      <a href="https://karing.app/download" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Hiddify</div>
+      <div class="tool-desc">多协议支持的全能代理工具</div>
+      <a href="https://hiddify.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 官网
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">NekoBox</div>
+      <div class="tool-desc">基于 sing-box 的安卓猫盒子客户端</div>
+      <a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Exclave</div>
+      <div class="tool-desc">新兴的代理客户端</div>
+      <a href="https://github.com/dyhkwong/Exclave/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">iOS 小火箭 (Shadowrocket)</div>
+      <div class="tool-desc">iOS 平台经典代理工具（需美区 Apple ID）</div>
+      <a href="https://stymei.github.io" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 相关地址
+      </a>
+    </li>
+
   </ul>
+
 </body>
 </html>
