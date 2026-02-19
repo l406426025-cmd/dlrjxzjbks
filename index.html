@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>代理工具合集 · 小姬</title>
+  <title>代理工具合集 · 极光版</title>
   <style>
     :root {
       --bg: #0a0515;
@@ -38,7 +38,7 @@
                   radial-gradient(circle at 90% 80%, var(--glow-cyan) 0%, transparent 60%);
       opacity: 0.65;
       pointer-events: none;
-      animation: aurora-flow 35 ease-in-out infinite alternate;
+      animation: aurora-flow 35s ease-in-out infinite alternate;
       z-index: -1;
     }
 
@@ -82,7 +82,7 @@
       border: 1px solid var(--card-border);
       border-radius: 22px;
       padding: 2.2rem;
-      transition: all 0.5 cubic-bezier(0.23, 1, 0.32, 1);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
       box-shadow: 0 12px 48px rgba(0,0,0,0.55);
       position: relative;
       overflow: hidden;
@@ -106,10 +106,10 @@
       color: var(--text-muted);
       font-size: 1.08rem;
       line-height: 1.7;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
-    .copy-btn {
+    .action-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.9rem;
@@ -125,12 +125,12 @@
       box-shadow: 0 5px 25px rgba(187,134,252,0.5);
     }
 
-    .copy-btn:hover {
+    .action-btn:hover {
       transform: translateX(10px) scale(1.06);
       box-shadow: 0 10px 40px rgba(3,218,198,0.7);
     }
 
-    .copy-btn.copied {
+    .action-btn.copied {
       background: linear-gradient(90deg, #22c55e, #86efac);
     }
 
@@ -150,6 +150,11 @@
       text-shadow: 0 0 35px rgba(187,134,252,0.9);
     }
 
+    .btn-row {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
     @media (max-width: 900px) {
       .tool-list { grid-template-columns: 1fr; }
       h1 { font-size: 3rem; }
@@ -159,17 +164,29 @@
 </head>
 <body>
 
-  <h1>代理工具合集 · 极光版</h1>
+  <h1>代理工具合集 · 小姬</h1>
   <div class="subtitle">常用客户端 & 永久订阅</div>
 
   <ul class="tool-list">
 
     <li class="tool-item special">
       <div class="tool-name">小姬永久订阅</div>
+      
+      <div class="btn-row">
+        <a 
+          href="https://l406426025-cmd.github.io/jbskleddjjctja/" 
+          class="action-btn" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          → 低价付费魔法推荐
+        </a>
+      </div>
+
       <div class="tool-desc">长期有效节点，一键导入 Karing / sing-box / Clash Meta / NekoBox 等客户端使用</div>
       
       <button 
-        class="copy-btn" 
+        class="action-btn" 
         id="copy-sub-btn" 
         data-clipboard-text="https://gist.githubusercontent.com/l406426025-cmd/bbbb3efb0bd1ed85a72b87f3bce95c49/raw/karing-nodes.txt"
       >
@@ -180,7 +197,7 @@
     <li class="tool-item">
       <div class="tool-name">Clash Party</div>
       <div class="tool-desc">功能丰富的新一代 Clash 客户端</div>
-      <a href="https://github.com/mihomo-party-org/clash-party/releases" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/mihomo-party-org/clash-party/releases" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -188,7 +205,7 @@
     <li class="tool-item">
       <div class="tool-name">FlClash</div>
       <div class="tool-desc">简洁美观的 Clash 系客户端</div>
-      <a href="https://flclash.cc/download.html" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://flclash.cc/download.html" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -196,7 +213,7 @@
     <li class="tool-item">
       <div class="tool-name">ClashMi</div>
       <div class="tool-desc">轻量级 Clash Meta 客户端</div>
-      <a href="https://clashmi.app/download" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://clashmi.app/download" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -204,7 +221,7 @@
     <li class="tool-item">
       <div class="tool-name">Clash Verge</div>
       <div class="tool-desc">跨平台热门 Clash 图形界面</div>
-      <a href="https://clashverge.net/downloads" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://clashverge.net/downloads" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -212,7 +229,7 @@
     <li class="tool-item">
       <div class="tool-name">ClashMeta for Android</div>
       <div class="tool-desc">安卓平台强大的 Clash Meta 内核客户端</div>
-      <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -220,7 +237,7 @@
     <li class="tool-item">
       <div class="tool-name">ClashBox</div>
       <div class="tool-desc">盒子风格的 Clash 客户端</div>
-      <a href="https://github.com/xiaobaigroup/ClashBox/releases" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/xiaobaigroup/ClashBox/releases" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -228,7 +245,7 @@
     <li class="tool-item">
       <div class="tool-name">Clash for Mac</div>
       <div class="tool-desc">macOS 专用 Clash 客户端</div>
-      <a href="https://clashmac.app" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://clashmac.app" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 官网
       </a>
     </li>
@@ -236,7 +253,7 @@
     <li class="tool-item">
       <div class="tool-name">Surfboard</div>
       <div class="tool-desc">简约的规则型代理客户端</div>
-      <a href="https://github.com/getsurfboard/surfboard/releases" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/getsurfboard/surfboard/releases" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -244,7 +261,7 @@
     <li class="tool-item">
       <div class="tool-name">v2rayN</div>
       <div class="tool-desc">Windows 经典 v2ray 客户端</div>
-      <a href="https://v2rayn.2dust.link" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://v2rayn.2dust.link" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -252,7 +269,7 @@
     <li class="tool-item">
       <div class="tool-name">v2rayNG</div>
       <div class="tool-desc">Android 平台主流 v2ray 客户端</div>
-      <a href="https://v2rayng.2dust.link" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://v2rayng.2dust.link" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -260,7 +277,7 @@
     <li class="tool-item">
       <div class="tool-name">sing-box</div>
       <div class="tool-desc">新一代通用代理内核（SagerNet 官方）</div>
-      <a href="https://github.com/SagerNet/sing-box/releases" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/SagerNet/sing-box/releases" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -268,7 +285,7 @@
     <li class="tool-item">
       <div class="tool-name">Karing</div>
       <div class="tool-desc">支持 sing-box 的现代化客户端</div>
-      <a href="https://karing.app/download" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://karing.app/download" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -276,7 +293,7 @@
     <li class="tool-item">
       <div class="tool-name">Hiddify</div>
       <div class="tool-desc">多协议支持的全能代理工具</div>
-      <a href="https://hiddify.com" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://hiddify.com" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 官网
       </a>
     </li>
@@ -284,7 +301,7 @@
     <li class="tool-item">
       <div class="tool-name">NekoBox</div>
       <div class="tool-desc">基于 sing-box 的安卓猫盒子客户端</div>
-      <a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -292,7 +309,7 @@
     <li class="tool-item">
       <div class="tool-name">Exclave</div>
       <div class="tool-desc">新兴的代理客户端</div>
-      <a href="https://github.com/dyhkwong/Exclave/releases" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/dyhkwong/Exclave/releases" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 下载页面
       </a>
     </li>
@@ -300,7 +317,7 @@
     <li class="tool-item">
       <div class="tool-name">iOS 小火箭 (Shadowrocket)</div>
       <div class="tool-desc">iOS 平台经典代理工具（需美区 Apple ID）</div>
-      <a href="https://stymei.github.io" class="copy-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://stymei.github.io" class="action-btn" target="_blank" rel="noopener noreferrer">
         → 相关地址
       </a>
     </li>
