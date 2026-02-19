@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>代理工具合集</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #2d2d2d;
+      --purple-light: #e0d4e9;
+      --purple: #b19cd9;
+      --purple-dark: #967bb6;
+      --card-bg: #f9f7fc;
+      --border: #e6d9f2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--purple);
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .tool-list {
+      list-style: none;
+    }
+
+    .tool-item {
+      margin-bottom: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.18s ease;
+    }
+
+    .tool-item:hover {
+      border-color: var(--purple);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(150, 123, 182, 0.08);
+    }
+
+    .tool-name {
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--purple-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .tool-desc {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .tool-link {
+      display: inline-block;
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .tool-link:hover {
+      color: var(--purple-dark);
+      text-decoration: underline;
+    }
+
+    .special {
+      background: linear-gradient(to right, #f9f7fc, #f0e8f8);
+      border-color: var(--purple-light);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.5rem 1rem; }
+      h1 { font-size: 1.9rem; }
+      .tool-item { padding: 1.1rem 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>代理工具合集</h1>
+
+  <ul class="tool-list">
+    <li class="tool-item special">
+      <div class="tool-name">翻墙永久订阅</div>
+      <div class="tool-desc">一键复制长期订阅链接（推荐先复制再导入客户端）</div>
+      <a href="https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+         class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 复制订阅
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Clash Party</div>
+      <div class="tool-desc">功能丰富的新一代 Clash 客户端</div>
+      <a href="https://github.com/mihomo-party-org/clash-party/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">FlClash</div>
+      <div class="tool-desc">简洁美观的 Clash 系客户端</div>
+      <a href="https://flclash.cc/download.html" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">ClashMi</div>
+      <div class="tool-desc">轻量级 Clash Meta 客户端</div>
+      <a href="https://clashmi.app/download" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Clash Verge</div>
+      <div class="tool-desc">跨平台热门 Clash 图形界面</div>
+      <a href="https://clashverge.net/downloads" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">ClashMeta for Android</div>
+      <div class="tool-desc">安卓平台强大的 Clash Meta 内核客户端</div>
+      <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">ClashBox</div>
+      <div class="tool-desc">盒子风格的 Clash 客户端</div>
+      <a href="https://github.com/xiaobaigroup/ClashBox/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Clash for Mac</div>
+      <div class="tool-desc">macOS 专用 Clash 客户端</div>
+      <a href="https://clashmac.app" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 官网
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Surfboard</div>
+      <div class="tool-desc">简约的规则型代理客户端</div>
+      <a href="https://github.com/getsurfboard/surfboard/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">v2rayN</div>
+      <div class="tool-desc">Windows 经典 v2ray 客户端</div>
+      <a href="https://v2rayn.2dust.link" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">v2rayNG</div>
+      <div class="tool-desc">Android 平台主流 v2ray 客户端</div>
+      <a href="https://v2rayng.2dust.link" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">sing-box</div>
+      <div class="tool-desc">新一代通用代理内核（SagerNet 官方）</div>
+      <a href="https://github.com/SagerNet/sing-box/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Karing</div>
+      <div class="tool-desc">支持 sing-box 的现代化客户端</div>
+      <a href="https://karing.app/download" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Hiddify</div>
+      <div class="tool-desc">多协议支持的全能代理工具</div>
+      <a href="https://hiddify.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 官网
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">NekoBox</div>
+      <div class="tool-desc">基于 sing-box 的安卓猫盒子客户端</div>
+      <a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">Exclave</div>
+      <div class="tool-desc">新兴的代理客户端</div>
+      <a href="https://github.com/dyhkwong/Exclave/releases" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 下载页面
+      </a>
+    </li>
+
+    <li class="tool-item">
+      <div class="tool-name">iOS 小火箭 (Shadowrocket)</div>
+      <div class="tool-desc">iOS 平台经典代理工具（需美区 Apple ID）</div>
+      <a href="https://stymei.github.io" class="tool-link" target="_blank" rel="noopener noreferrer">
+        → 相关地址
+      </a>
+    </li>
+  </ul>
+
+</body>
+</html>
