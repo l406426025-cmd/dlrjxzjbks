@@ -6,21 +6,21 @@
   <title>代理工具合集</title>
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #2d2d2d;
-      --purple-light: #e0d4e9;
-      --purple: #b19cd9;
-      --purple-dark: #967bb6;
-      --card-bg: #f9f7fc;
-      --border: #e6d9f2;
+      --bg: #f8f5ff;                /* 更柔和但有紫调的背景 */
+      --text: #1e1e2e;              /* 深色文字，提高对比 */
+      --purple-light: #d5c4ff;      /* 更亮的浅紫 */
+      --purple: #a78bfa;            /* 主紫色，更饱和鲜艳 */
+      --purple-dark: #7c3aed;       /* 深紫，用于强调 */
+      --purple-glow: #c084fc;       /* 发光/悬停用 */
+      --card-bg: #f0e9ff;           /* 卡片背景，更有紫感 */
+      --border: #c4b5fd;            /* 边框更明显 */
+      --gradient-special: linear-gradient(135deg, #f0e9ff, #e9d5ff, #d5c4ff);
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -30,87 +30,88 @@
       max-width: 860px;
       margin: 0 auto;
     }
-
     h1 {
       text-align: center;
-      color: var(--purple);
+      color: var(--purple-dark);
       margin-bottom: 2.5rem;
-      font-size: 2.2rem;
-      font-weight: 600;
+      font-size: 2.4rem;
+      font-weight: 700;
       letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(167, 139, 250, 0.25);
     }
-
     .tool-list {
       list-style: none;
     }
-
     .tool-item {
-      margin-bottom: 1.25rem;
-      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.4rem;
+      padding: 1.4rem 1.6rem;
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      transition: all 0.18s ease;
+      border-radius: 12px;
+      transition: all 0.22s ease;
+      box-shadow: 0 2px 8px rgba(167, 139, 250, 0.08);
     }
-
     .tool-item:hover {
-      border-color: var(--purple);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(150, 123, 182, 0.08);
+      border-color: var(--purple-glow);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(167, 139, 250, 0.18);
     }
-
     .tool-name {
-      font-size: 1.18rem;
-      font-weight: 600;
+      font-size: 1.25rem;
+      font-weight: 700;
       color: var(--purple-dark);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
-
     .tool-desc {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 0.7rem;
+      color: #4b5563;
+      font-size: 0.98rem;
+      margin-bottom: 0.8rem;
     }
-
     .tool-link {
       display: inline-block;
       color: var(--purple);
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.15s;
+      font-weight: 600;
+      transition: all 0.18s;
+      padding: 0.35rem 0.8rem;
+      border-radius: 6px;
     }
-
     .tool-link:hover {
-      color: var(--purple-dark);
-      text-decoration: underline;
+      color: white;
+      background: var(--purple-dark);
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
     }
-
     .special {
-      background: linear-gradient(to right, #f9f7fc, #f0e8f8);
+      background: var(--gradient-special);
       border-color: var(--purple-light);
+      box-shadow: 0 6px 20px rgba(167, 139, 250, 0.15);
     }
-
+    .special .tool-link {
+      background: var(--purple);
+      color: white;
+      padding: 0.5rem 1rem;
+    }
+    .special .tool-link:hover {
+      background: var(--purple-dark);
+    }
     @media (max-width: 600px) {
       body { padding: 1.5rem 1rem; }
-      h1 { font-size: 1.9rem; }
-      .tool-item { padding: 1.1rem 1.3rem; }
+      h1 { font-size: 2rem; }
+      .tool-item { padding: 1.2rem 1.4rem; }
     }
   </style>
 </head>
 <body>
-
   <h1>代理工具合集</h1>
-
   <ul class="tool-list">
     <li class="tool-item special">
       <div class="tool-name">翻墙永久订阅</div>
       <div class="tool-desc">一键复制长期订阅链接（推荐先复制再导入客户端）</div>
-      <a href="https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+      <a href="https://gist.githubusercontent.com/l406426025-cmd/bbbb3efb0bd1ed85a72b87f3bce95c49/raw/karing-nodes.txt"
          class="tool-link" target="_blank" rel="noopener noreferrer">
         → 复制订阅
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Clash Party</div>
       <div class="tool-desc">功能丰富的新一代 Clash 客户端</div>
@@ -118,7 +119,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">FlClash</div>
       <div class="tool-desc">简洁美观的 Clash 系客户端</div>
@@ -126,7 +126,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">ClashMi</div>
       <div class="tool-desc">轻量级 Clash Meta 客户端</div>
@@ -134,7 +133,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Clash Verge</div>
       <div class="tool-desc">跨平台热门 Clash 图形界面</div>
@@ -142,7 +140,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">ClashMeta for Android</div>
       <div class="tool-desc">安卓平台强大的 Clash Meta 内核客户端</div>
@@ -150,7 +147,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">ClashBox</div>
       <div class="tool-desc">盒子风格的 Clash 客户端</div>
@@ -158,7 +154,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Clash for Mac</div>
       <div class="tool-desc">macOS 专用 Clash 客户端</div>
@@ -166,7 +161,6 @@
         → 官网
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Surfboard</div>
       <div class="tool-desc">简约的规则型代理客户端</div>
@@ -174,7 +168,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">v2rayN</div>
       <div class="tool-desc">Windows 经典 v2ray 客户端</div>
@@ -182,7 +175,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">v2rayNG</div>
       <div class="tool-desc">Android 平台主流 v2ray 客户端</div>
@@ -190,7 +182,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">sing-box</div>
       <div class="tool-desc">新一代通用代理内核（SagerNet 官方）</div>
@@ -198,7 +189,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Karing</div>
       <div class="tool-desc">支持 sing-box 的现代化客户端</div>
@@ -206,7 +196,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Hiddify</div>
       <div class="tool-desc">多协议支持的全能代理工具</div>
@@ -214,7 +203,6 @@
         → 官网
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">NekoBox</div>
       <div class="tool-desc">基于 sing-box 的安卓猫盒子客户端</div>
@@ -222,7 +210,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Exclave</div>
       <div class="tool-desc">新兴的代理客户端</div>
@@ -230,7 +217,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">iOS 小火箭 (Shadowrocket)</div>
       <div class="tool-desc">iOS 平台经典代理工具（需美区 Apple ID）</div>
@@ -239,6 +225,5 @@
       </a>
     </li>
   </ul>
-
 </body>
 </html>
