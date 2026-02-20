@@ -17,9 +17,7 @@
       --card-border: rgba(187, 134, 252, 0.35);
       --strong-glow: 0 0 28px rgba(187,134,252,0.75), 0 0 55px rgba(3,218,198,0.45);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       background: linear-gradient(145deg, #0a0515, #140b28, #0a0515);
       color: var(--text);
@@ -29,7 +27,6 @@
       position: relative;
       overflow-x: hidden;
     }
-
     body::before {
       content: '';
       position: fixed;
@@ -38,16 +35,14 @@
                   radial-gradient(circle at 90% 80%, var(--glow-cyan) 0%, transparent 60%);
       opacity: 0.65;
       pointer-events: none;
-      animation: aurora-flow 35 ease-in-out infinite alternate;
+      animation: aurora-flow 35s ease-in-out infinite alternate;
       z-index: -1;
     }
-
     @keyframes aurora-flow {
-      0%   { transform: translate(0, 0) scale(1); opacity: 0.65; }
-      50%  { transform: translate(10%, 15%) scale(1.12); opacity: 0.85; }
+      0% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+      50% { transform: translate(10%, 15%) scale(1.12); opacity: 0.85; }
       100% { transform: translate(-8%, -12%) scale(1.08); opacity: 0.7; }
     }
-
     h1 {
       text-align: center;
       font-size: 3.8rem;
@@ -59,14 +54,12 @@
       margin-bottom: 1rem;
       text-shadow: 0 0 70px rgba(187,134,252,0.8);
     }
-
     .subtitle {
       text-align: center;
       font-size: 1.4rem;
       color: var(--text-muted);
       margin-bottom: 4rem;
     }
-
     .tool-list {
       list-style: none;
       display: grid;
@@ -75,14 +68,13 @@
       max-width: 1400px;
       margin: 0 auto;
     }
-
     .tool-item {
       background: var(--card-bg);
       backdrop-filter: blur(18px);
       border: 1px solid var(--card-border);
       border-radius: 22px;
       padding: 2.8rem 2.4rem;
-      transition: all 0.5 cubic-bezier(0.23, 1, 0.32, 1);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
       box-shadow: 0 12px 48px rgba(0,0,0,0.55);
       position: relative;
       overflow: hidden;
@@ -91,12 +83,10 @@
       align-items: center;
       text-align: center;
     }
-
     .tool-item:hover {
       transform: translateY(-12px);
       box-shadow: var(--strong-glow);
     }
-
     .tool-name {
       font-size: 1.9rem;
       font-weight: 800;
@@ -104,7 +94,6 @@
       color: var(--neon-purple);
       text-shadow: 0 0 18px var(--glow-purple);
     }
-
     .tool-desc {
       color: var(--text-muted);
       font-size: 1.08rem;
@@ -112,7 +101,6 @@
       margin-bottom: 2rem;
       max-width: 90%;
     }
-
     .action-btn {
       display: inline-flex;
       align-items: center;
@@ -126,27 +114,20 @@
       font-weight: 700;
       border: none;
       cursor: pointer;
-      transition: all 0.45;
+      transition: all 0.45s;
       box-shadow: 0 6px 28px rgba(187,134,252,0.5);
       min-width: 240px;
     }
-
     .action-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 40px rgba(3,218,198,0.7);
     }
-
-    .action-btn.copied {
-      background: linear-gradient(90deg, #22c55e, #86efac);
-    }
-
     .special {
       grid-column: 1 / -1;
       background: linear-gradient(135deg, rgba(45,35,85,0.75), rgba(75,45,115,0.65));
       border: 2.5px solid var(--neon-purple);
       box-shadow: 0 0 80px rgba(187,134,252,0.6);
     }
-
     .special .tool-name {
       font-size: 2.1rem;
       background: linear-gradient(90deg, #bb86fc, #03dac6, #bb86fc);
@@ -155,7 +136,6 @@
       color: transparent;
       text-shadow: 0 0 35px rgba(187,134,252,0.9);
     }
-
     @media (max-width: 900px) {
       .tool-list { grid-template-columns: 1fr; }
       h1 { font-size: 3rem; }
@@ -164,37 +144,34 @@
   </style>
 </head>
 <body>
-
   <h1>代理工具合集</h1>
   <div class="subtitle">常用客户端 & 永久订阅</div>
-
   <ul class="tool-list">
-
     <!-- 小姬低价机场推荐 - 独立卡片 -->
     <li class="tool-item special">
       <div class="tool-name">小姬低价机场推荐</div>
       <div class="tool-desc">精选稳定、性价比高的付费节点，适合日常主力使用</div>
-      <a 
-        href="https://l406426025-cmd.github.io/jbskleddjjctja/" 
-        class="action-btn" 
-        target="_blank" 
+      <a
+        href="https://l406426025-cmd.github.io/jbskleddjjctja/"
+        class="action-btn"
+        target="_blank"
         rel="noopener noreferrer"
       >
         → 查看低价机场
       </a>
     </li>
-
-    <!-- 翻墙永久订阅 - 独立卡片 -->
+    <!-- 小姬永久订阅 - 修改为跳转链接 -->
     <li class="tool-item special">
       <div class="tool-name">小姬永久订阅</div>
       <div class="tool-desc">长期有效节点，一键导入 Karing / sing-box / Clash Meta / NekoBox 等客户端使用</div>
-      <button 
-        class="action-btn" 
-        id="copy-sub-btn" 
-        data-clipboard-text="https://gist.githubusercontent.com/l406426025-cmd/bbbb3efb0bd1ed85a72b87f3bce95c49/raw/karing-nodes.txt"
+      <a
+        href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fjbksdyjdyfb%2F"
+        class="action-btn"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        → 点击复制订阅链接
-      </button>
+        → 访问订阅页面
+      </a>
     </li>
 
     <li class="tool-item">
@@ -204,7 +181,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">FlClash</div>
       <div class="tool-desc">简洁美观的 Clash 系客户端</div>
@@ -212,7 +188,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">ClashMi</div>
       <div class="tool-desc">轻量级 Clash Meta 客户端</div>
@@ -220,7 +195,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Clash Verge</div>
       <div class="tool-desc">跨平台热门 Clash 图形界面</div>
@@ -228,7 +202,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">ClashMeta for Android</div>
       <div class="tool-desc">安卓平台强大的 Clash Meta 内核客户端</div>
@@ -236,7 +209,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">ClashBox</div>
       <div class="tool-desc">盒子风格的 Clash 客户端</div>
@@ -244,7 +216,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Clash for Mac</div>
       <div class="tool-desc">macOS 专用 Clash 客户端</div>
@@ -252,7 +223,6 @@
         → 官网
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Surfboard</div>
       <div class="tool-desc">简约的规则型代理客户端</div>
@@ -260,7 +230,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">v2rayN</div>
       <div class="tool-desc">Windows 经典 v2ray 客户端</div>
@@ -268,7 +237,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">v2rayNG</div>
       <div class="tool-desc">Android 平台主流 v2ray 客户端</div>
@@ -276,7 +244,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">sing-box</div>
       <div class="tool-desc">新一代通用代理内核（SagerNet 官方）</div>
@@ -284,7 +251,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Karing</div>
       <div class="tool-desc">支持 sing-box 的现代化客户端</div>
@@ -292,7 +258,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Hiddify</div>
       <div class="tool-desc">多协议支持的全能代理工具</div>
@@ -300,7 +265,6 @@
         → 官网
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">NekoBox</div>
       <div class="tool-desc">基于 sing-box 的安卓猫盒子客户端</div>
@@ -308,7 +272,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">Exclave</div>
       <div class="tool-desc">新兴的代理客户端</div>
@@ -316,7 +279,6 @@
         → 下载页面
       </a>
     </li>
-
     <li class="tool-item">
       <div class="tool-name">iOS 小火箭 (Shadowrocket)</div>
       <div class="tool-desc">iOS 平台经典代理工具（需美区 Apple ID）</div>
@@ -324,32 +286,6 @@
         → 相关地址
       </a>
     </li>
-
   </ul>
-
-  <script>
-    const copyBtn = document.getElementById('copy-sub-btn');
-    const originalText = copyBtn.innerHTML;
-
-    copyBtn.addEventListener('click', async () => {
-      const textToCopy = copyBtn.getAttribute('data-clipboard-text');
-
-      try {
-        await navigator.clipboard.writeText(textToCopy);
-        copyBtn.innerHTML = '✅ 已复制到剪贴板！';
-        copyBtn.classList.add('copied');
-
-        setTimeout(() => {
-          copyBtn.innerHTML = originalText;
-          copyBtn.classList.remove('copied');
-        }, 2500);
-      } catch (err) {
-        console.error('复制失败:', err);
-        window.open(textToCopy, '_blank');
-        alert('复制失败，已打开链接，请手动复制');
-      }
-    });
-  </script>
-
 </body>
 </html>
